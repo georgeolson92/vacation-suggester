@@ -5,3 +5,7 @@
 #result {
   display: none;
 }
+
+#iceland-desc, #ibiza-desc, #vienna-desc, #istanbul-desc {
+  display: none;
+}
