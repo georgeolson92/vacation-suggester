@@ -3,24 +3,27 @@
   <head>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.12.14.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
     <title>Vacation Picker</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Which European Vacation Is Right For You?</h1>
+        <p>These places aren't Paris or London, but they'll be just as rewarding to visit.</p>
+      </div>
+    </div>
     <div class="container">
-      <h1>Which Lesser-Known European Vacation Is Right For You?</h1>
-      <p>These places aren't Paris or London, but they'll be just as rewarding to visit.</p>
-
       <form id="vacation">
         <div class="form-group">
           <label for="name">What's your name?</label>
           <input id="name" class="form-control"></input>
         </div>
         <div class="form-group">
-          <label for="travelinterest">Pick a color:</label>
-          <select id="travelinterest" class="form-control">
+          <label for="color">Pick a color:</label>
+          <select id="color" class="form-control">
             <option>Red</option>
             <option>Blue</option>
             <option>Gold</option>
@@ -29,16 +32,16 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="travelinterest">What kind of temperature sounds the best?</label>
-          <select id="travelinterest" class="form-control">
+          <label for="temp">What kind of temperature sounds the best?</label>
+          <select id="temp" class="form-control">
             <option>Hot</option>
             <option>Mild</option>
             <option>Cool</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="travelinterest">What kind of travel activity sounds most interesting to you?</label>
-          <select id="travelinterest" class="form-control">
+          <label for="activity">What kind of travel activity sounds most interesting to you?</label>
+          <select id="activity" class="form-control">
             <option>Chilling at the hot springs</option>
             <option>A night at the opera</option>
             <option>Finding an old church in the woods</option>
@@ -58,17 +61,24 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="music">How much can you afford to spend on your vacation?</label>
-          <select id="music" class="form-control">
+          <label for="money">How much can you afford to spend on your vacation?</label>
+          <select id="money" class="form-control">
             <option>A lot</option>
             <option>Moderate</option>
             <option>Like... nothing lol</option>
           </select>
         </div>
+        <button type="submit" class="btn btn-primary">Let's go!</button>
       </form>
 
       <div id="result">
-        <h1>Your ideal vacation spot is <span class="location"></span></h1>
+        <h3 class="page-header">Your ideal vacation spot is <span class="location"></span>!</h3>
+
+        <img src="" class="img-location">
+
+        <p class="location-desc"></p>
+        <h4>Recommended accomodation:</h4>
+        <p class="accomodation"></p>
 
 
       </div>
