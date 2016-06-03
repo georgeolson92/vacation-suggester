@@ -1,4 +1,4 @@
-# _What European Vacation Is Right For You?_
+# _What European Destination Is Right For You?_
 
 #### _A survey to determine the right European destination for you_
 
