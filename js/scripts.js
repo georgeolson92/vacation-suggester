@@ -33,10 +33,10 @@ $(document).ready(function(){
     } else if (activity === "party" && temp === "hot"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
-    } else if (activity === "party" && temp === "cool"){
-      $(".location").text(berlin);
-      $("#berlin-desc").show();
-    } else if (activity === "party" && temp === "med"){
+    } else if (activity === "party" &&  music === "no"){
+      $(".location").text(norway);
+      $("#norway-desc").show();
+    } else if (activity === "party" && temp !== "hot"){
       $(".location").text(berlin);
       $("#berlin-desc").show();
     } else if (activity === "springs" && temp === "cool"){
@@ -48,9 +48,6 @@ $(document).ready(function(){
     } else if (activity === "party" && music === "ib"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
-    } else if (activity === "party" && music === "sw"){
-      $(".location").text(berlin);
-      $("#berlin-desc").show();
     } else if (activity === "woods" && music === "no"){
       $(".location").text(norway);
       $("#norway-desc").show();
@@ -60,19 +57,16 @@ $(document).ready(function(){
     } else if (activity === "history" && temp === "hot"){
       $(".location").text(istanbul);
       $("#istanbul-desc").show();
-    } else if (activity === "history" && temp === "cool"){
+    } else if (activity === "history" && temp !== "hot"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
     } else if (activity === "history" && music === "vi"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
-    } else if (activity === "party" &&  music === "no"){
-      $(".location").text(norway);
-      $("#norway-desc").show();
-    } else if (temp === "cool" && beverage === "vodka"){
+    } else if (temp !== "hot" && beverage === "vodka"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
-    } else if (temp === "cool" && beverage === "water"){
+    } else if (temp !== "hot" && beverage === "water"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
     } else if (temp === "hot" && beverage === "strong"){
@@ -87,10 +81,40 @@ $(document).ready(function(){
     } else if (activity === "history"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
-    } else if (activity === "woods"){
+    } else if (activity === "woods" && temp === "hot"){
+      $(".location").text(istanbul);
+      $("#istanbul-desc").show();
+    } else if (activity === "woods" && temp !== "hot"){
       $(".location").text(norway);
       $("#norway-desc").show();
     } else if (activity === "springs"){
+      $(".location").text(iceland);
+      $("#iceland-desc").show();
+    } else if (beverage === "vodka" && temp === "hot") {
+      $(".location").text(ibiza);
+      $("#ibiza-desc").show();
+    } else if (beverage === "vodka"){
+      $(".location").text(stpetersburg);
+      $("#stpetersburg-desc").show();
+    } else if (beverage === "fancy"){
+      $(".location").text(vienna);
+      $("#vienna-desc").show();
+    } else if (beverage === "strong" && temp !== "hot"){
+      $(".location").text(stpetersburg);
+      $("#stpetersburg-desc").show();
+    } else if (beverage === "strong"){
+      $(".location").text(istanbul);
+      $("#istanbul-desc").show();
+    } else if (beverage === "beer" && temp === "hot") {
+      $(".location").text(ibiza);
+      $("#ibiza-desc").show();
+    } else if (beverage === "beer"){
+      $(".location").text(berlin);
+      $("#berlin-desc").show();
+    } else if (beverage === "water" && temp === "hot") {
+      $(".location").text(istanbul);
+      $("#istanbul-desc").show();
+    }  else if (beverage === "water"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
     } else {
