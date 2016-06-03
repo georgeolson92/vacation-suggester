@@ -34,7 +34,7 @@ $(document).ready(function(){
     } else if (activity === "party" && temp === "hot"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
-    } else if (activity === "party" &&  music === "no"){
+    } else if (activity === "party" &&  music === "metal"){
       $(".location").text(norway);
       $("#norway-desc").show();
     } else if (activity === "party" && temp !== "hot"){
@@ -43,16 +43,16 @@ $(document).ready(function(){
     } else if (activity === "springs" && temp !== "hot"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
-    } else if (activity === "springs" && music === "ic"){
+    } else if (activity === "springs" && music === "indie"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
-    } else if (activity === "party" && music === "ib"){
+    } else if (activity === "party" && music === "edm"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
-    } else if (activity === "woods" && music === "no"){
+    } else if (activity === "woods" && music === "metal"){
       $(".location").text(norway);
       $("#norway-desc").show();
-    } else if (activity === "opera" && music === "vi"){
+    } else if (activity === "opera" && music === "classical"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (activity === "history" && temp === "hot"){
@@ -61,7 +61,7 @@ $(document).ready(function(){
     } else if (activity === "history" && temp !== "hot"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
-    } else if (activity === "history" && music === "vi"){
+    } else if (activity === "history" && music === "classical"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (temp !== "hot" && beverage === "vodka"){
@@ -118,19 +118,19 @@ $(document).ready(function(){
     } else if (beverage === "water" && temp !== "hot"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
-    } else if (music === "ib" && temp === "hot"){
+    } else if (music === "edm" && temp === "hot"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
-    } else if (music === "ib" && temp !== "hot"){
+    } else if (music === "edm" && temp !== "hot"){
       $(".location").text(berlin);
       $("#berlin-desc").show();
-    } else if (music === "no"){
+    } else if (music === "metal"){
       $(".location").text(norway);
       $("#norway-desc").show();
-    } else if (music === "ic"){
+    } else if (music === "indie"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
-    } else if (music === "vi"){
+    } else if (music === "classical"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (temp === "cool"){
