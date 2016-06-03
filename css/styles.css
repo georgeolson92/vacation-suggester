@@ -9,6 +9,10 @@ body {
   color: white;
 }
 
+.jumbotron .glyphicon {
+  font-size: 1.5em;
+}
+
 #result {
   display: none;
 }

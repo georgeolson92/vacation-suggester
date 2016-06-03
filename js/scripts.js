@@ -11,10 +11,11 @@ $(document).ready(function(){
     var ibiza = "Ibiza";
     var vienna = "Vienna, Austria";
     var norway = "Norway";
-    var istanbul = "Istanbul, Turkey";
     var stpetersburg = "St. Petersburg, Russia";
     var berlin = "Berlin, Germany";
+    var florence = "Florence, Italy";
 
+    window.scrollTo(0, 0);
     $(".desc").hide();
     $(".has-error").removeClass("has-error");
     $(".formalert").remove();
@@ -23,11 +24,11 @@ $(document).ready(function(){
       $(".name-form-group").addClass("has-error");
       $(".name-form-group").append("<span class='formalert'>Please enter name.</span>");
     } else if (name !== "") {
-      $("#result").fadeIn();
       $("form#vacation").fadeOut();
+      $("#result").fadeIn();
     }
 
-    if (activity === "woods" && temp === "no"){
+    if (activity === "woods" && temp !== "hot"){
       $(".location").text(norway);
       $("#norway-desc").show();
     } else if (activity === "party" && temp === "hot"){
@@ -39,7 +40,7 @@ $(document).ready(function(){
     } else if (activity === "party" && temp !== "hot"){
       $(".location").text(berlin);
       $("#berlin-desc").show();
-    } else if (activity === "springs" && temp === "cool"){
+    } else if (activity === "springs" && temp !== "hot"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
     } else if (activity === "springs" && music === "ic"){
@@ -55,8 +56,8 @@ $(document).ready(function(){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (activity === "history" && temp === "hot"){
-      $(".location").text(istanbul);
-      $("#istanbul-desc").show();
+      $(".location").text(florence);
+      $("#florence-desc").show();
     } else if (activity === "history" && temp !== "hot"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
@@ -70,8 +71,8 @@ $(document).ready(function(){
       $(".location").text(iceland);
       $("#iceland-desc").show();
     } else if (temp === "hot" && beverage === "strong"){
-      $(".location").text(istanbul);
-      $("#istanbul-desc").show();
+      $(".location").text(florence);
+      $("#florence-desc").show();
     } else if (activity === "opera"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
@@ -82,12 +83,12 @@ $(document).ready(function(){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
     } else if (activity === "woods" && temp === "hot"){
-      $(".location").text(istanbul);
-      $("#istanbul-desc").show();
+      $(".location").text(florence);
+      $("#florence-desc").show();
     } else if (activity === "woods" && temp !== "hot"){
       $(".location").text(norway);
       $("#norway-desc").show();
-    } else if (activity === "springs"){
+    } else if (activity === "springs" && temp !== "hot"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
     } else if (beverage === "vodka" && temp === "hot") {
@@ -96,29 +97,53 @@ $(document).ready(function(){
     } else if (beverage === "vodka"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
-    } else if (beverage === "fancy"){
+    } else if (beverage === "fancy" && temp === "hot"){
+      $(".location").text(florence);
+      $("#florence-desc").show();
+    } else if (beverage === "fancy" && temp !== "hot"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (beverage === "strong" && temp !== "hot"){
       $(".location").text(stpetersburg);
       $("#stpetersburg-desc").show();
     } else if (beverage === "strong"){
-      $(".location").text(istanbul);
-      $("#istanbul-desc").show();
+      $(".location").text(florence);
+      $("#florence-desc").show();
     } else if (beverage === "beer" && temp === "hot") {
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
     } else if (beverage === "beer"){
       $(".location").text(berlin);
       $("#berlin-desc").show();
-    } else if (beverage === "water" && temp === "hot") {
-      $(".location").text(istanbul);
-      $("#istanbul-desc").show();
-    }  else if (beverage === "water"){
+    } else if (beverage === "water" && temp !== "hot"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
+    } else if (music === "ib" && temp === "hot"){
+      $(".location").text(ibiza);
+      $("#ibiza-desc").show();
+    } else if (music === "ib" && temp !== "hot"){
+      $(".location").text(berlin);
+      $("#berlin-desc").show();
+    } else if (music === "no"){
+      $(".location").text(norway);
+      $("#norway-desc").show();
+    } else if (music === "ic"){
+      $(".location").text(iceland);
+      $("#iceland-desc").show();
+    } else if (music === "vi"){
+      $(".location").text(vienna);
+      $("#vienna-desc").show();
+    } else if (temp === "cool"){
+      $(".location").text(iceland);
+      $("#iceland-desc").show();
+    } else if (temp === "mid"){
+      $(".location").text(vienna);
+      $("#vienna-desc").show();
+    } else if (temp === "hot"){
+      $(".location").text(florence);
+      $("#florence-desc").show();
     } else {
-      $(".location").text("somewhere but idk cuz this code's busted");
+      $(".location").text("somewhere");
     }
 
     if (money === "rich"){
@@ -137,7 +162,7 @@ $(document).ready(function(){
       $(".img-hotel").attr("src", "img/hostel.png");
       $(".hotel-desc").text("You'll be sleeping around tons of other people but hey, at least it's cheap, dude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.");
     } else {
-      $(".hotel").text("somewhere but idk cuz this code's busted");
+      $(".hotel").text("somewhere");
     }
 
     $(".name").text(name);
@@ -146,7 +171,8 @@ $(document).ready(function(){
   });
 
   $(".returnto").click(function(){
-    $("form#vacation").fadeIn();
     $("#result").fadeOut();
+    $("form#vacation").fadeIn();
+    window.scrollTo(0, 0);
   });
 });
