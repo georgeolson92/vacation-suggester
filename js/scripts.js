@@ -76,12 +76,18 @@ $(document).ready(function(){
     if (money === "rich"){
       $(".hotel").text("The Grand Fancypants Hotel");
       $(".stars").text("Price range: $$$$$$$$$$$$$");
+      $(".img-hotel").attr("src", "img/fancyhotel.jpg");
+      $(".hotel-desc").text("Includes free limousine service, fine dining, in-room champagne bar.");
     } else if (money === "mid"){
       $(".hotel").text("Decent Budget Hotel/Guesthouse");
       $(".stars").text("Price range: $$$");
+      $(".img-hotel").attr("src", "img/budget.jpg");
+      $(".hotel-desc").text("A nice, centrally-located hotel you can relax in.");
     } else if (money === "poor"){
-      $(".hotel").text("Cheap AF Hostel");
+      $(".hotel").text("Cheap Hostel");
       $(".stars").text("Price range: $");
+      $(".img-hotel").attr("src", "img/hostel.png");
+      $(".hotel-desc").text("You'll be sleeping around tons of other people but hey, at least it's cheap, dude.");
     } else {
       $(".hotel").text("somewhere but idk cuz this code's busted");
     }

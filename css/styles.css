@@ -6,6 +6,28 @@
   display: none;
 }
 
+.sub-title{
+  margin-bottom: 0px;
+  font-size: 1.2em;
+}
+
+.hotel {
+  font-size: 1.5em;
+}
+
+.stars {
+  font-weight: bold;
+}
+
+
+
+#accomodation {
+  margin-top: 40px;
+
+}
+
+h4 {margin-top: 0px; text-decoration: underline;}
+
 #iceland-desc, #ibiza-desc, #vienna-desc, #istanbul-desc {
   display: none;
 }
