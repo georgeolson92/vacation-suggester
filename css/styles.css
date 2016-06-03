@@ -1,6 +1,11 @@
 
 
-
+.jumbotron {
+  background-image:url('../img/europe.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
 
 #result {
   display: none;
@@ -20,11 +25,9 @@
 }
 
 .desc img{
-  max-height: 300px;
   margin: 0px auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  float: right;
 }
 
 #accomodation {
@@ -36,4 +39,13 @@ h4 {margin-top: 0px; text-decoration: underline;}
 
 #iceland-desc, #ibiza-desc, #vienna-desc, #istanbul-desc {
   display: none;
+}
+
+
+@media screen and (min-width: 770px){
+  .desc img{
+    max-height: 400px;
+    float: right;
+    margin-left: 15px;
+  }
 }
