@@ -23,8 +23,12 @@ _No known bugs in the current version._
 _HTML, CSS, JavaScript, jQuery_
 
 ## Contact Info
-_Should you experience any issues or would like to get in touch with the creator, contact George Olson at <a href="mailto:georgeolson92@gmail.com">georgeolson92@gmail.com</a>.
+_Should you experience any issues or would like to get in touch with the creator, contact George Olson at <a href="mailto:georgeolson92@gmail.com">georgeolson92@gmail.com</a>._
 
 ### License
 
 *Open GPL*
+
+### Copyright
+
+_2016. George Olson._
