@@ -166,7 +166,6 @@ $(document).ready(function(){
     }
 
     $(".name").text(name);
-
     event.preventDefault();
   });
 

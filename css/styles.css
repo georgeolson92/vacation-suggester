@@ -18,59 +18,47 @@ body {
 .page-header {
   margin-top: 0px;
 }
-
 .btn-primary {
   background-color: #002699;
   border: 0px;
 }
-
 .formalert {
   color: red;
 }
-
 
 /* Results section */
 
 #result {
   display: none;
 }
-
-
 .sub-title{
   font-size: 1.2em;
 }
-
 .hotel {
   font-size: 1.5em;
 }
-
 .stars {
   font-weight: bold;
 }
-
 .desc img{
   margin-bottom: 30px;
 }
-
 #accomodation {
   margin-top: 40px;
 }
-
-
-#result h4 {margin-top: 0px; text-decoration: underline;}
-
+#result h4 {
+  margin-top: 0px;
+  text-decoration: underline;
+}
 #iceland-desc, #ibiza-desc, #vienna-desc, #istanbul-desc {
   display: none;
 }
-
-
 .location {
   font-weight: bold;
   font-size: 1.1em;
 }
 
 /* Responsive Queries */
-
 
 @media screen and (min-width: 770px){
   .desc img{

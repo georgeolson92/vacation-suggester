@@ -1,4 +1,4 @@
-# _What European Destination Is Right For You?_
+# _European Destination Suggester_
 
 #### _A survey to determine the right European destination for you_
 
