@@ -1,6 +1,10 @@
+/* Overall body styles */
+
 body {
   padding-bottom: 40px;
 }
+
+/* Jumbotron section at top */
 
 .jumbotron {
   background-image:url('../img/europe.jpg');
@@ -9,21 +13,31 @@ body {
   color: white;
 }
 
-.jumbotron .glyphicon {
-  font-size: 1.5em;
-}
+/* Form styles */
 
-#result {
-  display: none;
-}
-
-.sub-title{
-  font-size: 1.2em;
+.page-header {
+  margin-top: 0px;
 }
 
 .btn-primary {
   background-color: #002699;
   border: 0px;
+}
+
+.formalert {
+  color: red;
+}
+
+
+/* Results section */
+
+#result {
+  display: none;
+}
+
+
+.sub-title{
+  font-size: 1.2em;
 }
 
 .hotel {
@@ -43,24 +57,19 @@ body {
 }
 
 
-h4 {margin-top: 0px; text-decoration: underline;}
+#result h4 {margin-top: 0px; text-decoration: underline;}
 
 #iceland-desc, #ibiza-desc, #vienna-desc, #istanbul-desc {
   display: none;
 }
 
-.formalert {
-  color: red;
-}
 
 .location {
   font-weight: bold;
   font-size: 1.1em;
 }
 
-.page-header {
-  margin-top: 0px;
-}
+/* Responsive Queries */
 
 
 @media screen and (min-width: 770px){
