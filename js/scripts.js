@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("form#vacation").submit(function(event){
     var name = $("input#name").val();
-    var color = $("select#color").val();
+    var beverage = $("select#beverage").val();
     var temp = $("select#temp").val();
     var activity = $("select#activity").val();
     var music = $("select#music").val();
@@ -13,10 +13,19 @@ $(document).ready(function(){
     var norway = "Norway";
     var istanbul = "Istanbul, Turkey";
     var stpetersburg = "St. Petersburg, Russia";
+    var berlin = "Berlin, Germany";
 
     $(".desc").hide();
+    $(".has-error").removeClass("has-error");
+    $(".formalert").remove();
 
-    console.log(name, color, temp, activity, music, money);
+    if ( name === "" ) {
+      $(".name-form-group").addClass("has-error");
+      $(".name-form-group").append("<span class='formalert'>Please enter name.</span>");
+    } else if (name !== "") {
+      $("#result").fadeIn();
+      $("form#vacation").fadeOut();
+    }
 
     if (activity === "woods" && temp === "no"){
       $(".location").text(norway);
@@ -24,6 +33,12 @@ $(document).ready(function(){
     } else if (activity === "party" && temp === "hot"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
+    } else if (activity === "party" && temp === "cool"){
+      $(".location").text(berlin);
+      $("#berlin-desc").show();
+    } else if (activity === "party" && temp === "med"){
+      $(".location").text(berlin);
+      $("#berlin-desc").show();
     } else if (activity === "springs" && temp === "cool"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
@@ -33,6 +48,9 @@ $(document).ready(function(){
     } else if (activity === "party" && music === "ib"){
       $(".location").text(ibiza);
       $("#ibiza-desc").show();
+    } else if (activity === "party" && music === "sw"){
+      $(".location").text(berlin);
+      $("#berlin-desc").show();
     } else if (activity === "woods" && music === "no"){
       $(".location").text(norway);
       $("#norway-desc").show();
@@ -44,16 +62,22 @@ $(document).ready(function(){
       $("#istanbul-desc").show();
     } else if (activity === "history" && temp === "cool"){
       $(".location").text(stpetersburg);
-      $("#peters-desc").show();
+      $("#stpetersburg-desc").show();
     } else if (activity === "history" && music === "vi"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
     } else if (activity === "party" &&  music === "no"){
       $(".location").text(norway);
       $("#norway-desc").show();
-    } else if (activity === "party" &&  temp === "cool"){
+    } else if (temp === "cool" && beverage === "vodka"){
+      $(".location").text(stpetersburg);
+      $("#stpetersburg-desc").show();
+    } else if (temp === "cool" && beverage === "water"){
       $(".location").text(iceland);
       $("#iceland-desc").show();
+    } else if (temp === "hot" && beverage === "strong"){
+      $(".location").text(istanbul);
+      $("#istanbul-desc").show();
     } else if (activity === "opera"){
       $(".location").text(vienna);
       $("#vienna-desc").show();
@@ -77,22 +101,28 @@ $(document).ready(function(){
       $(".hotel").text("The Grand Fancypants Hotel");
       $(".stars").text("Price range: $$$$$$$$$$$$$");
       $(".img-hotel").attr("src", "img/fancyhotel.jpg");
-      $(".hotel-desc").text("Includes free limousine service, fine dining, in-room champagne bar.");
+      $(".hotel-desc").text("Includes free limousine service, fine dining, in-room champagne bar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.");
     } else if (money === "mid"){
       $(".hotel").text("Decent Budget Hotel/Guesthouse");
       $(".stars").text("Price range: $$$");
       $(".img-hotel").attr("src", "img/budget.jpg");
-      $(".hotel-desc").text("A nice, centrally-located hotel you can relax in.");
+      $(".hotel-desc").text("A nice, centrally-located hotel you can relax in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.");
     } else if (money === "poor"){
       $(".hotel").text("Cheap Hostel");
       $(".stars").text("Price range: $");
       $(".img-hotel").attr("src", "img/hostel.png");
-      $(".hotel-desc").text("You'll be sleeping around tons of other people but hey, at least it's cheap, dude.");
+      $(".hotel-desc").text("You'll be sleeping around tons of other people but hey, at least it's cheap, dude. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.");
     } else {
       $(".hotel").text("somewhere but idk cuz this code's busted");
     }
 
-    $("#result").show();
+    $(".name").text(name);
+
     event.preventDefault();
+  });
+
+  $(".returnto").click(function(){
+    $("form#vacation").fadeIn();
+    $("#result").fadeOut();
   });
 });

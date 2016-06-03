@@ -1,4 +1,6 @@
-
+body {
+  padding-bottom: 40px;
+}
 
 .jumbotron {
   background-image:url('../img/europe.jpg');
@@ -12,8 +14,12 @@
 }
 
 .sub-title{
-  margin-bottom: 0px;
   font-size: 1.2em;
+}
+
+.btn-primary {
+  background-color: #002699;
+  border: 0px;
 }
 
 .hotel {
@@ -25,15 +31,13 @@
 }
 
 .desc img{
-  margin: 0px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 #accomodation {
   margin-top: 40px;
-  margin-bottom: 40px;
 }
+
 
 h4 {margin-top: 0px; text-decoration: underline;}
 
@@ -41,10 +45,23 @@ h4 {margin-top: 0px; text-decoration: underline;}
   display: none;
 }
 
+.formalert {
+  color: red;
+}
+
+.location {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
 
 @media screen and (min-width: 770px){
   .desc img{
-    max-height: 400px;
+    max-width: 500px;
     float: right;
     margin-left: 15px;
   }

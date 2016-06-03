@@ -11,27 +11,28 @@
   <body>
     <div class="jumbotron">
       <div class="container">
-        <h1>Which European Vacation Is Right For You?</h1>
+        <h1>What European Vacation Is Right For You?</h1>
       </div>
     </div>
     <div class="container">
       <form id="vacation">
-        <div class="form-group">
+        <h3 class="page-header">Fill out the following questions to get your destination recommendation:</h3>
+        <div class="form-group name-form-group">
           <label for="name">What's your name?</label>
           <input id="name" class="form-control"></input>
         </div>
         <div class="form-group">
-          <label for="color">Pick a color:</label>
-          <select id="color" class="form-control">
-            <option value="is">Red</option>
-            <option value="ib">Blue</option>
-            <option value="vi">Gold</option>
-            <option value="no">Black</option>
-            <option value="ic">Green</option>
+          <label for="beverage">Pick a beverage:</label>
+          <select id="beverage" class="form-control">
+            <option value="fancy">Some fancy coffee drink</option>
+            <option value="strong">Very very strong coffee</option>
+            <option value="beer">Beer</option>
+            <option value="vodka">Vodka</option>
+            <option value="water">Mineral water</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="temp">What kind of temperature sounds the best?</label>
+          <label for="temp">What kind of temperature do you prefer?</label>
           <select id="temp" class="form-control">
             <option value="hot">Hot</option>
             <option value="med">Mild</option>
@@ -39,13 +40,13 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="activity">What kind of travel activity sounds most interesting to you?</label>
+          <label for="activity">What kind of travel activity sounds the most enjoyable to you?</label>
           <select id="activity" class="form-control">
             <option value="springs">Chilling at the hot springs</option>
             <option value="opera">A night at the opera</option>
             <option value="woods">Finding an old church in the woods</option>
             <option value="party">Partying!!!!!!</option>
-            <option value="history">Looking at old palaces and soaking in the history</option>
+            <option value="history">Seeing old palaces and historic landmarks</option>
           </select>
         </div>
         <div class="form-group">
@@ -70,48 +71,55 @@
       </form>
 
       <div id="result">
-        <h3 class="page-header">Hello, <span class="name"></span>! Your ideal vacation spot is <span class="location"></span>.</h3>
-
-        <img src="" class="img-location">
+        <button type="button" class="btn btn-primary pull-right returnto hidden-xs">Return to Survey</button>
+        <h3 class="page-header">Hello, <span class="name"></span>! Your ideal European vacation spot is <span class="location"></span>.</h3>
 
         <div id="iceland-desc" class="desc">
           <img src="img/iceland.jpg" class="img-responsive" alt="Icelandic waterfall">
           <p><span class="sub-title">You're cooler than a glacier.</span><br>
-            You love Nordic countries, but you're a shameless hipster so you want to stay away from the more well-known places. You knew about Sigur Ros and Of Monsters and Men before everyone else. Don't forget to bring all your expensive outerwear. Oh, and you WILL humblebrag about your exciting adventures with everyone you know.</p>
+            You love Nordic countries, but you're a shameless hipster so you want to stay away from the more well-known places. Don't forget to bring all your expensive outerwear. Oh, and you WILL humblebrag about your exciting adventures with everyone you know. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
         <div id="ibiza-desc" class="desc">
           <img src="img/ibiza.jpg" class="img-responsive" alt="Ibiza">
           <p><span class="sub-title">You party animal, you!</span><br>
-            Ibiza is a pretty little island, but you give zero Fs about that. You're more concerned with chilling by the pool while some random DJ spins chill electronic beats. You'll probably end up dancing the night away with a group of other tourists from (insert country here).</p>
+            Ibiza is a pretty little island, but you give zero Fs about that. You're more concerned with chilling by the pool while some random DJ spins chill electronic beats. You'll probably end up dancing the night away with a group of other tourists from (insert country here). Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
         <div id="vienna-desc" class="desc">
           <img src="img/vienna.jpg" class="img-responsive" alt="Vienna">
           <p><span class="sub-title">How refined you are.</span><br>
-            You're looking for a European cultural capital, but Paris is honestly <em>soo</em> overrated. You'll spend your time galavanting across the city from one museum to another, eventually ending up at the opera. Go ahead, scoff at your silly friends when they talk to you about their "fun" vacation to a basic European destination.</p>
+            You're looking for a European cultural capital, but Paris is honestly <em>soo</em> overrated. You'll spend your time galavanting across the city from one museum to another, eventually ending up at the opera. Go ahead, scoff at your silly friends when they talk to you about their "fun" vacations to basic European destinations. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
         <div id="istanbul-desc" class="desc">
           <img src="img/istanbul.jpg" class="img-responsive" alt="Istanbul">
           <p><span class="sub-title"></span><br>
-            You want to adventure somewhere warm that is full of history.</p>
+            You want to adventure somewhere warm that is full of history. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
-        <div id="petersburg-desc" class="desc">
+        <div id="stpetersburg-desc" class="desc">
           <img src="img/stpetersburg.jpg" class="img-responsive" alt="St Petersburg">
-          <p><span class="sub-title"></span><br></p>
+          <p><span class="sub-title"></span><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
         <div id="norway-desc" class="desc">
           <img src="img/norway.jpg" class="img-responsive" alt="Norway">
           <p><span class="sub-title"></span><br>
-          You're looking to see some dramatic landscapes, as well as history & culture. You can see yourself as a viking, but without all of the pillaging and with a more stable government.</p>
+          You're looking to see some dramatic landscapes, as well as history & culture. You can see yourself as a viking, but without all of the pillaging and with a more stable government. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
+          <div class="clearfix"></div>
+        </div>
+
+        <div id="berlin-desc" class="desc">
+          <img src="img/berlin.jpg" class="img-responsive" alt="Berlin">
+          <p><span class="sub-title"></span><br>
+          Berlin has <em>the</em> sweetest night life, brah. There's also tons of museums and a lot of history to enjoy when you're not tearing up the dancefloor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac laoreet turpis. Integer malesuada pretium lorem nec tempor. Fusce at convallis tortor, eu bibendum nisi. Nunc vestibulum, tellus pellentesque tempus molestie, urna risus rhoncus arcu, sed aliquet dolor nibh sed mauris. In iaculis blandit dignissim. Vestibulum hendrerit ligula vel sagittis eleifend. Morbi ac purus rutrum, feugiat ex ut, maximus magna. Praesent non tortor vitae nisi laoreet lacinia. Aenean accumsan ac quam et gravida.</p>
           <div class="clearfix"></div>
         </div>
 
@@ -129,6 +137,8 @@
             </div>
           </div>
         </div>
+
+        <button type="button"  class="btn btn-primary pull-right returnto">Return to Survey</button>
 
       </div>
 
